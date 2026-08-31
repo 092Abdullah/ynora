@@ -44,7 +44,7 @@ export function Hero() {
         Cloud Architecture
       </p>
 
-      <div className="relative z-10 mx-auto flex max-w-[1440px] justify-center px-4 pt-8 sm:pt-12 lg:pt-14">
+      <div className="relative z-10 mx-auto flex max-w-[1440px] justify-center px-4 pt-8 pb-24 sm:pt-12 sm:pb-32 lg:pt-14 lg:pb-40">
         <div className="inline-flex max-w-full flex-col items-stretch">
           <h1 className="hero-display text-center text-ink">
             EMP
@@ -83,15 +83,6 @@ export function Hero() {
             TER
           </p>
         </div>
-      </div>
-
-      <div className="relative mt-5 h-[150px] w-full overflow-hidden sm:h-[240px] lg:mt-6 lg:h-[330px]">
-        <img
-          src="/images/wave.jpg"
-          alt=""
-          className="h-full w-full object-cover object-center transition-transform duration-[1800ms] ease-out hover:scale-105"
-        />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent" />
       </div>
     </section>
   );
