@@ -1,0 +1,98 @@
+import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+function WorkBtn({ className }: { className?: string }) {
+  return (
+    <a
+      href="#contact"
+      className={cn(
+        "inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-orange px-5 py-2.5 text-[13px] font-semibold text-snow shadow-[0_8px_20px_rgba(255,118,42,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-hot hover:shadow-[0_12px_28px_rgba(255,118,42,0.45)]",
+        className,
+      )}
+    >
+      Work with us
+      <ArrowUpRight className="size-3.5" strokeWidth={2.6} />
+    </a>
+  );
+}
+
+export function Hero() {
+  return (
+    <section
+      id="top"
+      className="relative overflow-hidden bg-paper bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/images/hero-wave-bg.png)" }}
+    >
+      <p className="v-label absolute bottom-[10%] left-6 hidden max-w-[140px] text-left lg:block">
+        Continuous
+        <br />
+        Maintenance &
+        <br />
+        Enterprise Security
+      </p>
+      <p className="v-label absolute top-[16%] right-6 hidden max-w-[140px] text-right lg:block">
+        AI Consulting &
+        <br />
+        Strategic Roadmaps
+      </p>
+      <p
+        className="v-label absolute top-[38%] right-6 hidden lg:block"
+        style={{ writingMode: "vertical-rl" }}
+      >
+        System Integration &
+        <br />
+        Cloud Architecture
+      </p>
+
+      <div className="relative z-10 mx-auto flex max-w-[1440px] justify-center px-4 pt-8 sm:pt-12 lg:pt-14">
+        <div className="inline-flex max-w-full flex-col items-stretch">
+          <h1 className="hero-display text-center text-ink">
+            EMP
+            <span className="relative mx-[0.01em] inline-flex h-[0.78em] w-[0.78em] translate-y-[0.03em] items-center justify-center align-middle">
+              <img
+                src="/images/sphere.jpg"
+                alt=""
+                className="size-full rounded-full object-cover transition-transform duration-500 hover:rotate-12 hover:scale-105"
+              />
+            </span>
+            WERING
+          </h1>
+
+          <WorkBtn className="mx-auto mt-5 mb-3 lg:hidden" />
+
+          <div className="mt-1 flex items-center justify-center lg:justify-between">
+            <WorkBtn className="hidden lg:inline-flex" />
+            <p className="hero-display text-ink">
+              TO
+              <span className="relative mx-[0.1em] inline-flex h-[0.7em] w-[0.7em] translate-y-[0.06em] items-center justify-center overflow-hidden rounded-[16%] align-middle">
+                <img
+                  src="/images/hex.jpg"
+                  alt=""
+                  className="size-[140%] max-w-none object-cover mix-blend-multiply transition-transform duration-500 hover:rotate-6 hover:scale-110"
+                />
+              </span>
+              EVOLVE
+            </p>
+          </div>
+
+          <p className="hero-display mt-1 text-center text-orange">
+            SMAR
+            <span className="relative mx-[0.03em] inline-flex h-[0.7em] w-[0.7em] translate-y-[0.05em] items-center justify-center rounded-[16%] bg-orange align-middle text-ink shadow-[0_10px_24px_rgba(255,118,42,0.35)] transition-transform duration-300 hover:scale-110 hover:rotate-6">
+              <ArrowUpRight className="size-[55%]" strokeWidth={2.8} />
+            </span>
+            TER
+          </p>
+        </div>
+      </div>
+
+      <div className="relative mt-5 h-[150px] w-full overflow-hidden sm:h-[240px] lg:mt-6 lg:h-[330px]">
+        <img
+          src="/images/wave.jpg"
+          alt=""
+          className="h-full w-full object-cover object-center transition-transform duration-[1800ms] ease-out hover:scale-105"
+        />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper to-transparent" />
+      </div>
+    </section>
+  );
+}

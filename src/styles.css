@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #ff762a;
+  --color-orange-hot: #e56520;
+  --color-ink: #171717;
+  --color-ink-2: #1f1f1f;
+  --color-paper: #dadada;
+  --color-muted: #d3d5d7;
+  --color-muted-2: #d9d9d9;
+  --color-snow: #ffffff;
+  --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.85rem;
+  --radius-xl: 1.15rem;
+  --radius-full: 999px;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-orange);
+    color: var(--color-snow);
+  }
+}
+
+@layer utilities {
+  .hero-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.86;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: clamp(2.05rem, 12.2vw, 8.6rem);
+  }
+
+  .section-kicker {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .display-md {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    text-transform: uppercase;
+    font-size: clamp(1.7rem, 6.4vw, 2.85rem);
+  }
+
+  .connect-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 0.85;
+    text-transform: uppercase;
+    font-size: clamp(3.4rem, 18vw, 9.5rem);
+  }
+
+  .v-label {
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--color-ink) 45%, transparent);
+    line-height: 1.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
