@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { Logo } from "./logo";
+import { Reveal } from "./reveal";
 
 const NAV = [
   { href: "#top", label: "Home" },
@@ -22,7 +23,7 @@ export function SiteFooter() {
   return (
     <footer className="relative bg-ink text-snow">
       <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-12 lg:divide-x lg:divide-white/10">
-        <div className="px-5 py-14 sm:px-6 lg:col-span-6 lg:px-14 lg:py-20">
+        <Reveal className="px-5 py-14 sm:px-6 lg:col-span-6 lg:px-14 lg:py-20">
           <Logo invert markClassName="size-16 sm:size-20" wordmarkClassName="text-6xl sm:text-7xl lg:text-8xl" />
           <p className="mt-10 max-w-md text-2xl leading-snug font-bold text-snow sm:text-3xl">
             Empowering businesses with smarter automation, built for growth and simplicity.
@@ -63,7 +64,7 @@ export function SiteFooter() {
               {sent ? "Joined" : "Submit"}
             </button>
           </form>
-        </div>
+        </Reveal>
 
         <nav className="px-5 py-4 sm:px-6 lg:col-span-4 lg:px-0 lg:py-0">
           {NAV.map((item) => (
@@ -73,7 +74,7 @@ export function SiteFooter() {
               className="flex min-h-14 items-center justify-between border-b border-white/10 px-2 py-4 text-[13px] font-semibold tracking-[0.08em] text-snow uppercase transition-all duration-200 hover:translate-x-1 hover:text-orange sm:px-10 lg:py-7"
             >
               {item.label}
-              <span>→</span>
+              <span className="transition-transform duration-200">→</span>
             </a>
           ))}
         </nav>

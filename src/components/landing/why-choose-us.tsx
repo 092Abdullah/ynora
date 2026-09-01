@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { useState } from "react";
+import { Reveal } from "./reveal";
 
 const QUOTES = [
   {
@@ -12,7 +13,7 @@ const QUOTES = [
     text: "Ynora didn’t just install models — they rebuilt how our team decides. The roadmap paid for itself in a quarter.",
     name: "Amelia Chen",
     role: "Head of Operations",
-    photo: "/images/avatar.webp",
+    photo: "/images/avatars.webp",
   },
 ];
 
@@ -23,7 +24,7 @@ export function WhyChooseUs() {
   return (
     <section id="why" className="bg-paper py-10 lg:py-16">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
-        <div className="mb-10 grid grid-cols-1 items-start gap-4 lg:mb-16 lg:grid-cols-12 lg:gap-6">
+        <Reveal className="mb-10 grid grid-cols-1 items-start gap-4 lg:mb-16 lg:grid-cols-12 lg:gap-6">
           <div className="flex items-center gap-2 lg:col-span-4 lg:pt-3">
             <span className="size-1.5 rounded-full bg-orange" />
             <p className="section-kicker text-ink/55">Why choose us</p>
@@ -36,11 +37,11 @@ export function WhyChooseUs() {
             that
             <br className="hidden sm:block" /> work in real life
           </h2>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
-          <div className="flex flex-col gap-3">
-            <article className="flex flex-1 flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-transform duration-300 hover:-translate-y-1 sm:p-5">
+          <Reveal delay={0} className="flex flex-col gap-3">
+            <article className="flex flex-1 flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.12)] sm:p-5">
               <p className="flex-1 text-[15px] leading-relaxed text-ink/80">“{q.text}”</p>
               <div className="mt-6 flex items-center gap-3">
                 <img
@@ -73,7 +74,7 @@ export function WhyChooseUs() {
               </div>
             </article>
 
-            <div className="flex items-center gap-3 rounded-sm bg-ink px-5 py-4 text-snow transition-transform duration-300 hover:scale-[1.02]">
+            <div className="flex items-center gap-3 rounded-sm bg-ink px-5 py-4 text-snow transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_14px_32px_rgba(0,0,0,0.25)]">
               <div className="flex -space-x-2">
                 <img src="/images/avatars.jpg" alt="" className="size-8 rounded-full object-cover object-[18%_center] ring-2 ring-ink" />
                 <img src="/images/avatars.jpg" alt="" className="size-8 rounded-full object-cover object-center ring-2 ring-ink" />
@@ -84,26 +85,26 @@ export function WhyChooseUs() {
                 <p className="mt-1 text-[11px] text-muted">Happy customers</p>
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative min-h-[220px] overflow-hidden rounded-sm sm:min-h-[260px]">
+          <Reveal delay={100} className="group relative min-h-[220px] overflow-hidden rounded-sm sm:min-h-[260px]">
             <img
               src="/images/vr.jpg"
               alt="Specialist in a VR headset"
-              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-ink/90 via-ink/55 to-transparent px-5 pb-5 pt-16 text-snow">
               <div>
                 <p className="text-3xl font-bold leading-none">83%</p>
                 <p className="mt-1 text-[11px] text-muted">Customer Satisfaction Rate</p>
               </div>
-              <span className="flex size-9 items-center justify-center rounded-full border border-orange/50 text-orange">
+              <span className="flex size-9 items-center justify-center rounded-full border border-orange/50 text-orange transition-transform duration-300 group-hover:scale-110">
                 <Check className="size-4" strokeWidth={2.4} />
               </span>
             </div>
-          </div>
+          </Reveal>
 
-          <article className="flex flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-transform duration-300 hover:-translate-y-1 sm:p-5">
+          <Reveal delay={200} as="article" className="flex flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.12)] sm:p-5">
             <h3 className="text-lg font-bold text-ink">Verified Expertise</h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/65">
               We combine deep technical knowledge with creative strategy to deliver AI solutions that
@@ -120,20 +121,20 @@ export function WhyChooseUs() {
               <img
                 src="/images/vr.jpg"
                 alt=""
-                className="size-16 rounded-lg object-cover ring-2 ring-snow transition-transform duration-300 hover:-translate-y-1 hover:z-10"
+                className="size-16 rounded-lg object-cover ring-2 ring-snow transition-all duration-300 hover:-translate-y-1.5 hover:z-10 hover:shadow-lg"
               />
               <img
                 src="/images/particles.jpg"
                 alt=""
-                className="size-16 rounded-lg object-cover ring-2 ring-snow transition-transform duration-300 hover:-translate-y-1 hover:z-10"
+                className="size-16 rounded-lg object-cover ring-2 ring-snow transition-all duration-300 hover:-translate-y-1.5 hover:z-10 hover:shadow-lg"
               />
               <img
                 src="/images/david.jpg"
                 alt=""
-                className="size-16 rounded-lg object-cover ring-2 ring-snow transition-transform duration-300 hover:-translate-y-1 hover:z-10"
+                className="size-16 rounded-lg object-cover ring-2 ring-snow transition-all duration-300 hover:-translate-y-1.5 hover:z-10 hover:shadow-lg"
               />
             </div>
-          </article>
+          </Reveal>
         </div>
       </div>
     </section>
