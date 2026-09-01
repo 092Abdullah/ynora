@@ -21,7 +21,7 @@ export function WhyChooseUs() {
   const q = QUOTES[i];
 
   return (
-    <section id="why" className="bg-paper py-14 lg:min-h-[328px] lg:py-10">
+    <section id="why" className="bg-paper py-14 lg:py-24">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
         <div className="mb-8 grid grid-cols-1 items-start gap-4 lg:mb-14 lg:grid-cols-12 lg:gap-6">
           <div className="flex items-center gap-2 lg:col-span-4 lg:pt-3">

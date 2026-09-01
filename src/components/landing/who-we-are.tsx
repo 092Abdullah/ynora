@@ -2,7 +2,7 @@ import { Crosshair, Pentagon } from "lucide-react";
 
 export function WhoWeAre() {
   return (
-    <section id="who" className="bg-ink text-snow lg:min-h-[299px]">
+    <section id="who" className="bg-ink text-snow">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-4">
         <div className="flex items-start gap-2 border-white/10 px-5 pt-10 sm:px-6 lg:border-r lg:px-8 lg:pt-14 xl:px-10">
           <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-orange" />
