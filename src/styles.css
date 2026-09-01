@@ -51,7 +51,7 @@
     line-height: 0.86;
     text-transform: uppercase;
     white-space: nowrap;
-    font-size: clamp(2.05rem, 12.2vw, 8.6rem);
+    font-size: clamp(1.9rem, 10.8vw, 7.4rem);
   }
 
   .section-kicker {

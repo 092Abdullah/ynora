@@ -70,7 +70,7 @@ export function SiteFooter() {
             <a
               key={item.label}
               href={item.href}
-              className="flex min-h-12 items-center justify-between border-b border-white/10 px-2 py-4 text-sm font-bold tracking-[0.1em] text-snow uppercase transition-all duration-200 hover:translate-x-1 hover:text-orange sm:px-8 lg:py-6"
+              className="flex min-h-11 items-center justify-between border-b border-white/10 px-2 py-3.5 text-[13px] font-semibold tracking-[0.08em] text-snow uppercase transition-all duration-200 hover:translate-x-1 hover:text-orange sm:px-8 lg:py-5"
             >
               {item.label}
               <span>→</span>
