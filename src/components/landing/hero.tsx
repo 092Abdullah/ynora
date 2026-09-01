@@ -61,7 +61,7 @@ export function Hero() {
         <div className="inline-flex max-w-full flex-col items-stretch">
           <h1 className="hero-display text-center text-snow">
             EMP
-            <span className="relative mx-[0.01em] inline-flex h-[0.78em] w-[0.78em] translate-y-[0.03em] items-center justify-center align-middle">
+            <span className="relative mx-[0.01em] inline-flex h-[0.74em] w-[0.74em] translate-y-[0.04em] items-center justify-center align-middle">
               <img
                 src="/images/sphere.jpg"
                 alt=""
@@ -76,7 +76,7 @@ export function Hero() {
 
             <p className="hero-display text-snow">
               TO
-              <span className="relative mx-[0.1em] inline-flex h-[0.7em] w-[0.7em] translate-y-[0.06em] items-center justify-center overflow-hidden rounded-[16%] align-middle">
+              <span className="relative mx-[0.1em] inline-flex h-[0.74em] w-[0.74em] translate-y-[0.04em] items-center justify-center overflow-hidden rounded-[16%] align-middle">
                 <img
                   src="/images/hex.jpg"
                   alt=""
@@ -89,7 +89,7 @@ export function Hero() {
 
           <p className="hero-display mt-1 text-center text-orange">
             SMAR
-            <span className="relative mx-[0.03em] inline-flex h-[0.7em] w-[0.7em] translate-y-[0.05em] items-center justify-center rounded-[16%] bg-orange align-middle text-ink shadow-[0_10px_24px_rgba(255,118,42,0.35)] transition-transform duration-300 hover:scale-110 hover:rotate-6">
+            <span className="relative mx-[0.03em] inline-flex h-[0.74em] w-[0.74em] translate-y-[0.04em] items-center justify-center rounded-[16%] bg-orange align-middle text-ink shadow-[0_10px_24px_rgba(255,118,42,0.35)] transition-transform duration-300 hover:scale-110 hover:rotate-6">
               <ArrowUpRight className="size-[55%]" strokeWidth={2.8} />
             </span>
             TER
