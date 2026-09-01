@@ -21,10 +21,10 @@ export function SiteFooter() {
 
   return (
     <footer className="relative bg-ink text-snow">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-12">
-        <div className="border-white/10 px-5 py-12 sm:px-6 lg:col-span-7 lg:border-r lg:px-12 lg:py-14">
-          <Logo invert markClassName="size-14" wordmarkClassName="text-4xl sm:text-5xl" />
-          <p className="mt-8 max-w-sm text-xl font-bold text-snow sm:text-2xl">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-12 lg:divide-x lg:divide-white/10">
+        <div className="px-5 py-14 sm:px-6 lg:col-span-6 lg:px-14 lg:py-20">
+          <Logo invert markClassName="size-16 sm:size-20" wordmarkClassName="text-6xl sm:text-7xl lg:text-8xl" />
+          <p className="mt-10 max-w-md text-2xl leading-snug font-bold text-snow sm:text-3xl">
             Empowering businesses with smarter automation, built for growth and simplicity.
           </p>
           <div className="mt-8 flex gap-2 text-snow">
@@ -46,7 +46,7 @@ export function SiteFooter() {
           </div>
           <form
             onSubmit={onSubmit}
-            className="mt-10 flex w-full max-w-md items-center gap-1 rounded-full border border-white/15 bg-transparent p-1.5 pl-4"
+            className="mt-12 flex w-full max-w-md items-center gap-1 rounded-full border border-white/15 bg-transparent p-1.5 pl-4"
           >
             <input
               type="email"
@@ -65,18 +65,20 @@ export function SiteFooter() {
           </form>
         </div>
 
-        <nav className="px-5 py-4 sm:px-6 lg:col-span-5 lg:px-0 lg:py-0">
+        <nav className="px-5 py-4 sm:px-6 lg:col-span-4 lg:px-0 lg:py-0">
           {NAV.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="flex min-h-11 items-center justify-between border-b border-white/10 px-2 py-3.5 text-[13px] font-semibold tracking-[0.08em] text-snow uppercase transition-all duration-200 hover:translate-x-1 hover:text-orange sm:px-8 lg:py-5"
+              className="flex min-h-14 items-center justify-between border-b border-white/10 px-2 py-4 text-[13px] font-semibold tracking-[0.08em] text-snow uppercase transition-all duration-200 hover:translate-x-1 hover:text-orange sm:px-10 lg:py-7"
             >
               {item.label}
               <span>→</span>
             </a>
           ))}
         </nav>
+
+        <div className="hidden lg:col-span-2 lg:block" />
       </div>
       <p className="border-t border-white/10 px-5 py-5 text-center text-[11px] text-muted">
         Copyright<span className="text-orange">©</span> <span className="text-orange">2026</span> I Published

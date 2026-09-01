@@ -20,26 +20,26 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[440px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[520px] lg:min-h-[600px]"
+      className="relative min-h-[460px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[560px] lg:min-h-[660px]"
       style={{
         backgroundImage: "url(/images/hero-wave-bg.jpg)",
         backgroundSize: "100% auto",
       }}
     >
-      <p className="v-label absolute bottom-[14%] left-6 hidden max-w-[140px] text-left lg:block">
+      <p className="v-label absolute bottom-[30%] left-6 hidden max-w-[140px] text-left lg:block">
         Continuous
         <br />
         Maintenance &
         <br />
         Enterprise Security
       </p>
-      <p className="v-label absolute top-[22%] right-6 hidden max-w-[140px] text-right lg:block">
+      <p className="v-label absolute top-[8%] right-6 hidden max-w-[150px] text-right lg:block">
         AI Consulting &
         <br />
         Strategic Roadmaps
       </p>
       <p
-        className="v-label absolute top-[42%] right-6 hidden lg:block"
+        className="v-label absolute top-[16%] right-6 hidden lg:block"
         style={{ writingMode: "vertical-rl" }}
       >
         System Integration &
@@ -47,9 +47,9 @@ export function Hero() {
         Cloud Architecture
       </p>
 
-      <div className="relative z-10 mx-auto flex max-w-[1320px] justify-center px-6 pt-6 pb-6 sm:px-10 sm:pt-8 sm:pb-8 lg:px-16 lg:pt-10 lg:pb-10">
+      <div className="relative z-10 mx-auto flex max-w-[1320px] justify-center px-6 pt-6 pb-6 sm:px-10 sm:pt-8 sm:pb-8 lg:px-16 lg:pt-8 lg:pb-8">
         <div className="inline-flex max-w-full flex-col items-stretch">
-          <h1 className="hero-display text-center text-ink">
+          <h1 className="hero-display text-center text-snow">
             EMP
             <span className="relative mx-[0.01em] inline-flex h-[0.78em] w-[0.78em] translate-y-[0.03em] items-center justify-center align-middle">
               <img
@@ -63,7 +63,7 @@ export function Hero() {
 
           <div className="mt-1 flex items-center justify-center lg:justify-between">
             <WorkBtn className="hidden lg:inline-flex" />
-            <p className="hero-display text-ink">
+            <p className="hero-display text-snow">
               TO
               <span className="relative mx-[0.1em] inline-flex h-[0.7em] w-[0.7em] translate-y-[0.06em] items-center justify-center overflow-hidden rounded-[16%] align-middle">
                 <img

@@ -16,7 +16,7 @@ export function Cta() {
       </svg>
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
-        <div className="mb-8 flex justify-center sm:mb-10 md:justify-end">
+        <div className="mb-6 flex justify-center sm:mb-8 md:justify-end">
           <div className="text-left md:text-right">
             <div className="flex items-center gap-3 md:flex-row-reverse">
               <div className="flex -space-x-2">
@@ -40,7 +40,7 @@ export function Cta() {
           </p>
         </div>
 
-        <div className="mt-10 text-left sm:mt-14">
+        <div className="mt-6 text-left sm:mt-8">
           <p className="max-w-xs text-sm leading-relaxed text-ink/50">
             Kickstart your AI journey with expert guidance, tailored strategies, and transformative
             results designed for your success.

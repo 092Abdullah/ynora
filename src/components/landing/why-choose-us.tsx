@@ -21,14 +21,14 @@ export function WhyChooseUs() {
   const q = QUOTES[i];
 
   return (
-    <section id="why" className="bg-paper py-14 lg:py-24">
+    <section id="why" className="bg-paper py-10 lg:py-16">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
-        <div className="mb-8 grid grid-cols-1 items-start gap-4 lg:mb-14 lg:grid-cols-12 lg:gap-6">
+        <div className="mb-10 grid grid-cols-1 items-start gap-4 lg:mb-16 lg:grid-cols-12 lg:gap-6">
           <div className="flex items-center gap-2 lg:col-span-4 lg:pt-3">
             <span className="size-1.5 rounded-full bg-orange" />
             <p className="section-kicker text-ink/55">Why choose us</p>
           </div>
-          <h2 className="display-md text-ink lg:col-span-8">
+          <h2 className="display-md max-w-lg text-ink lg:col-span-8">
             Building{" "}
             <span className="inline-block bg-orange px-1.5 py-[0.06em] leading-none text-snow">
               AI solutions
@@ -40,7 +40,7 @@ export function WhyChooseUs() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
           <div className="flex flex-col gap-3">
-            <article className="flex flex-1 flex-col rounded-2xl bg-snow p-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-transform duration-300 hover:-translate-y-1 sm:p-6">
+            <article className="flex flex-1 flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-transform duration-300 hover:-translate-y-1 sm:p-5">
               <p className="flex-1 text-[15px] leading-relaxed text-ink/80">“{q.text}”</p>
               <div className="mt-6 flex items-center gap-3">
                 <img
@@ -73,7 +73,7 @@ export function WhyChooseUs() {
               </div>
             </article>
 
-            <div className="flex items-center gap-3 rounded-2xl bg-ink px-5 py-4 text-snow transition-transform duration-300 hover:scale-[1.02]">
+            <div className="flex items-center gap-3 rounded-sm bg-ink px-5 py-4 text-snow transition-transform duration-300 hover:scale-[1.02]">
               <div className="flex -space-x-2">
                 <img src="/images/avatars.jpg" alt="" className="size-8 rounded-full object-cover object-[18%_center] ring-2 ring-ink" />
                 <img src="/images/avatars.jpg" alt="" className="size-8 rounded-full object-cover object-center ring-2 ring-ink" />
@@ -86,7 +86,7 @@ export function WhyChooseUs() {
             </div>
           </div>
 
-          <div className="relative min-h-[280px] overflow-hidden rounded-2xl sm:min-h-[320px]">
+          <div className="relative min-h-[220px] overflow-hidden rounded-sm sm:min-h-[260px]">
             <img
               src="/images/vr.jpg"
               alt="Specialist in a VR headset"
@@ -103,7 +103,7 @@ export function WhyChooseUs() {
             </div>
           </div>
 
-          <article className="flex flex-col rounded-2xl bg-snow p-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-transform duration-300 hover:-translate-y-1 sm:p-6">
+          <article className="flex flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-transform duration-300 hover:-translate-y-1 sm:p-5">
             <h3 className="text-lg font-bold text-ink">Verified Expertise</h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/65">
               We combine deep technical knowledge with creative strategy to deliver AI solutions that
