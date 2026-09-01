@@ -26,20 +26,20 @@ export function Hero() {
         backgroundSize: "100% auto",
       }}
     >
-      <p className="v-label absolute bottom-[10%] left-6 hidden max-w-[140px] text-left lg:block">
+      <p className="v-label absolute bottom-[14%] left-6 hidden max-w-[140px] text-left lg:block">
         Continuous
         <br />
         Maintenance &
         <br />
         Enterprise Security
       </p>
-      <p className="v-label absolute top-[16%] right-6 hidden max-w-[140px] text-right lg:block">
+      <p className="v-label absolute top-[22%] right-6 hidden max-w-[140px] text-right lg:block">
         AI Consulting &
         <br />
         Strategic Roadmaps
       </p>
       <p
-        className="v-label absolute top-[38%] right-6 hidden lg:block"
+        className="v-label absolute top-[42%] right-6 hidden lg:block"
         style={{ writingMode: "vertical-rl" }}
       >
         System Integration &
