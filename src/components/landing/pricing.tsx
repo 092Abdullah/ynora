@@ -6,7 +6,7 @@ export function Pricing() {
   const [monthly, setMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="bg-black py-14 text-snow lg:py-24">
+    <section id="pricing" className="bg-black py-10 text-snow lg:py-14">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
         <div className="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
           <div>
@@ -42,8 +42,8 @@ export function Pricing() {
           </div>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-2">
-          <article className="rounded-2xl border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FE7428]/50 sm:p-7">
+        <div className="grid gap-4 lg:grid-cols-[1fr_1.35fr]">
+          <article className="rounded-2xl border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FE7428]/50 sm:p-6">
             <h3 className="text-lg font-semibold">AI Strategy & Consulting</h3>
             <p className="mt-1 text-sm text-muted">Boost performance with bespoke AI models</p>
             <ul className="mt-6 space-y-3 text-sm text-muted">
@@ -56,7 +56,7 @@ export function Pricing() {
                 NLP & data intelligence
               </li>
             </ul>
-            <div className="mt-8 flex items-center gap-3 sm:mt-10">
+            <div className="mt-6 flex items-center gap-3 sm:mt-8">
               <p className="text-3xl font-bold">{monthly ? "$1,320" : "$8,400"}</p>
               <button
                 type="button"
@@ -78,7 +78,7 @@ export function Pricing() {
             </div>
           </article>
 
-          <article className="flex flex-col rounded-2xl border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FE7428]/50 sm:p-7">
+          <article className="flex flex-col rounded-2xl border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FE7428]/50 sm:p-6">
             <p className="flex items-baseline gap-1">
               <span className="text-4xl font-bold">{monthly ? "$2,299" : "$14,900"}</span>
               <span className="text-sm text-muted">{monthly ? "/monthly" : "/project"}</span>
@@ -96,7 +96,7 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col items-stretch gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-6 flex flex-col items-stretch gap-4 border-t border-white/10 pt-4 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-muted">
                 Delivery Time: <span className="text-snow">2-3 weeks</span>
               </p>

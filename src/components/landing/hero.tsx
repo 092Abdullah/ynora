@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[560px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[680px] lg:min-h-[840px]"
+      className="relative min-h-[440px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[520px] lg:min-h-[600px]"
       style={{
         backgroundImage: "url(/images/hero-wave-bg.jpg)",
         backgroundSize: "100% auto",
@@ -47,7 +47,7 @@ export function Hero() {
         Cloud Architecture
       </p>
 
-      <div className="relative z-10 mx-auto flex max-w-[1320px] justify-center px-6 pt-8 pb-10 sm:px-10 sm:pt-12 sm:pb-14 lg:px-16 lg:pt-14 lg:pb-20">
+      <div className="relative z-10 mx-auto flex max-w-[1320px] justify-center px-6 pt-6 pb-6 sm:px-10 sm:pt-8 sm:pb-8 lg:px-16 lg:pt-10 lg:pb-10">
         <div className="inline-flex max-w-full flex-col items-stretch">
           <h1 className="hero-display text-center text-ink">
             EMP
