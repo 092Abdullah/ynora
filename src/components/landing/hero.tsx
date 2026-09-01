@@ -32,6 +32,7 @@ export function Hero() {
         playsInline
         preload="auto"
         aria-hidden="true"
+        onCanPlay={(e) => e.currentTarget.playbackRate = 0.6} 
       />
 
       <p className="v-label absolute bottom-[30%] left-6 z-10 hidden max-w-[140px] text-left lg:block">
