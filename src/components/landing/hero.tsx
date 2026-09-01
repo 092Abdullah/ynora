@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[560px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[680px] lg:min-h-[840px]"
+      className="relative min-h-[560px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[680px] lg:min-h-[402px]"
       style={{
         backgroundImage: "url(/images/hero-wave-bg.png)",
         backgroundSize: "100% auto",

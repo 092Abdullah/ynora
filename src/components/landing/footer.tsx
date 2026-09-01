@@ -20,7 +20,7 @@ export function SiteFooter() {
   }
 
   return (
-    <footer className="relative bg-ink text-snow">
+    <footer className="relative bg-ink text-snow lg:min-h-[321px]">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-12">
         <div className="border-white/10 px-5 py-12 sm:px-6 lg:col-span-7 lg:border-r lg:px-12 lg:py-14">
           <Logo invert markClassName="size-14" wordmarkClassName="text-4xl sm:text-5xl" />

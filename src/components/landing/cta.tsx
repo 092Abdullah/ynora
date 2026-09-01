@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function Cta() {
   return (
-    <section id="contact" className="relative overflow-hidden bg-paper py-16 sm:py-24 lg:py-32">
+    <section id="contact" className="relative overflow-hidden bg-paper py-16 sm:py-24 lg:min-h-[424px] lg:py-16">
       <div className="pointer-events-none absolute top-10 left-8 hidden h-16 w-16 border-t-2 border-l-2 border-ink/15 md:block" />
       <div className="pointer-events-none absolute right-8 bottom-10 hidden h-16 w-16 border-r-2 border-b-2 border-ink/15 md:block" />
 

@@ -6,7 +6,7 @@ export function Pricing() {
   const [monthly, setMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="bg-black py-14 text-snow lg:py-24">
+    <section id="pricing" className="bg-black py-14 text-snow lg:min-h-[274px] lg:py-10">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
         <div className="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
           <div>
