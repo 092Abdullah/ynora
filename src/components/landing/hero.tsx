@@ -20,23 +20,26 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-paper bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url(/images/hero-wave-bg.png)" }}
+      className="relative min-h-[560px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[680px] lg:min-h-[840px]"
+      style={{
+        backgroundImage: "url(/images/hero-wave-bg.png)",
+        backgroundSize: "100% auto",
+      }}
     >
-      <p className="v-label absolute bottom-[10%] left-6 hidden max-w-[140px] text-left lg:block">
+      <p className="v-label absolute bottom-[14%] left-6 hidden max-w-[140px] text-left lg:block">
         Continuous
         <br />
         Maintenance &
         <br />
         Enterprise Security
       </p>
-      <p className="v-label absolute top-[16%] right-6 hidden max-w-[140px] text-right lg:block">
+      <p className="v-label absolute top-[22%] right-6 hidden max-w-[140px] text-right lg:block">
         AI Consulting &
         <br />
         Strategic Roadmaps
       </p>
       <p
-        className="v-label absolute top-[38%] right-6 hidden lg:block"
+        className="v-label absolute top-[42%] right-6 hidden lg:block"
         style={{ writingMode: "vertical-rl" }}
       >
         System Integration &
