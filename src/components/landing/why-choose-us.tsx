@@ -13,7 +13,7 @@ const QUOTES = [
     text: "Ynora didn’t just install models — they rebuilt how our team decides. The roadmap paid for itself in a quarter.",
     name: "Amelia Chen",
     role: "Head of Operations",
-    photo: "/images/avatars.webp",
+    photo: "/images/avatar.webp",
   },
 ];
 
