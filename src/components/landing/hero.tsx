@@ -22,7 +22,7 @@ export function Hero() {
       id="top"
       className="relative min-h-[560px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[680px] lg:min-h-[840px]"
       style={{
-        backgroundImage: "url(/images/hero-wave-bg.png)",
+        backgroundImage: "url(/images/hero-wave-bg.jpg)",
         backgroundSize: "100% auto",
       }}
     >
