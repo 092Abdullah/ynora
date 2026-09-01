@@ -44,7 +44,7 @@ export function Hero() {
         Cloud Architecture
       </p>
 
-      <div className="relative z-10 mx-auto flex max-w-[1440px] justify-center px-4 pt-8 pb-24 sm:pt-12 sm:pb-32 lg:pt-14 lg:pb-40">
+      <div className="relative z-10 mx-auto flex max-w-[1440px] justify-center px-4 pt-8 pb-10 sm:pt-12 sm:pb-14 lg:pt-14 lg:pb-20">
         <div className="inline-flex max-w-full flex-col items-stretch">
           <h1 className="hero-display text-center text-ink">
             EMP
@@ -87,4 +87,3 @@ export function Hero() {
     </section>
   );
 }
-
