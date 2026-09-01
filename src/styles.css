@@ -9,14 +9,20 @@
   --color-muted: #d3d5d7;
   --color-muted-2: #d9d9d9;
   --color-snow: #ffffff;
+
   --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.85rem;
   --radius-xl: 1.15rem;
   --radius-full: 999px;
 }
+
+/* =========================================================
+   BASE
+========================================================= */
 
 @layer base {
   button:not(:disabled),
@@ -41,7 +47,27 @@
     background: var(--color-orange);
     color: var(--color-snow);
   }
+
+  /* Smooth default transitions */
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select {
+    transition:
+      color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
 }
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
 
 @layer utilities {
   .hero-display {
@@ -84,16 +110,367 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--color-ink) 45%, transparent);
+    color: color-mix(
+      in srgb,
+      var(--color-ink) 45%,
+      transparent
+    );
     line-height: 1.45;
   }
 }
+
+/* =========================================================
+   CARD ANIMATIONS
+========================================================= */
+
+/* Use: className="animated-card" */
+
+.animated-card {
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms ease;
+}
+
+.animated-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(23, 23, 23, 0.12);
+}
+
+/* Orange light sweep */
+
+.animated-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 118, 42, 0.08) 50%,
+    transparent 80%
+  );
+
+  transform: translateX(-120%);
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+}
+
+.animated-card:hover::after {
+  transform: translateX(120%);
+}
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.animated-image {
+  overflow: hidden;
+}
+
+.animated-image img {
+  transition:
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 500ms ease;
+}
+
+.animated-image:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.96);
+}
+
+/* =========================================================
+   BUTTON ANIMATIONS
+========================================================= */
+
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: var(--color-orange-hot);
+
+  transform: translateY(100%);
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: -1;
+}
+
+.animated-button:hover::before {
+  transform: translateY(0);
+}
+
+.animated-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(229, 101, 32, 0.25);
+}
+
+.animated-button:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* =========================================================
+   ARROW / ICON HOVER
+========================================================= */
+
+.animated-icon {
+  transition:
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animated-button:hover .animated-icon,
+.animated-card:hover .animated-icon {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================================
+   LINK UNDERLINE ANIMATION
+========================================================= */
+
+.animated-link {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 100%;
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition:
+    transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animated-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* =========================================================
+   FLOATING ANIMATION
+========================================================= */
+
+.float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =========================================================
+   PULSE
+========================================================= */
+
+.pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.04);
+  }
+}
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================================
+   REVEAL ANIMATIONS
+========================================================= */
+
+.reveal-up {
+  animation: reveal-up 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-fade {
+  animation: reveal-fade 800ms ease both;
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   STAGGERED REVEALS
+========================================================= */
+
+.stagger-1 {
+  animation-delay: 100ms;
+}
+
+.stagger-2 {
+  animation-delay: 200ms;
+}
+
+.stagger-3 {
+  animation-delay: 300ms;
+}
+
+.stagger-4 {
+  animation-delay: 400ms;
+}
+
+.stagger-5 {
+  animation-delay: 500ms;
+}
+
+/* =========================================================
+   GLOW / ORANGE ACCENT
+========================================================= */
+
+.orange-glow {
+  transition:
+    box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.orange-glow:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 0 1px rgba(255, 118, 42, 0.15),
+    0 18px 50px rgba(255, 118, 42, 0.18);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.animated-nav-link {
+  position: relative;
+  transition: color 250ms ease;
+}
+
+.animated-nav-link::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 999px;
+  background: var(--color-orange);
+
+  transform: translateX(-50%) scale(0);
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animated-nav-link:hover {
+  color: var(--color-orange);
+}
+
+.animated-nav-link:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+/* =========================================================
+   PAGE LOAD
+========================================================= */
+
+.page-enter {
+  animation: page-enter 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
