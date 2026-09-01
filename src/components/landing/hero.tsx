@@ -20,26 +20,36 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[460px] overflow-hidden bg-paper bg-bottom bg-no-repeat sm:min-h-[560px] lg:min-h-[660px]"
-      style={{
-        backgroundImage: "url(/images/hero-wave-bg.jpg)",
-        backgroundSize: "100% auto",
-      }}
+      className="relative min-h-[460px] overflow-hidden bg-paper sm:min-h-[560px] lg:min-h-[660px]"
     >
-      <p className="v-label absolute bottom-[30%] left-6 hidden max-w-[140px] text-left lg:block">
+      {/* Animated Hero Background */}
+      <video
+        className="absolute inset-0 z-0 h-full w-full object-cover object-bottom"
+        src="/images/hero-wave-bg.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+
+      <p className="v-label absolute bottom-[30%] left-6 z-10 hidden max-w-[140px] text-left lg:block">
         Continuous
         <br />
         Maintenance &
         <br />
         Enterprise Security
       </p>
-      <p className="v-label absolute top-[8%] right-6 hidden max-w-[150px] text-right lg:block">
+
+      <p className="v-label absolute top-[8%] right-6 z-10 hidden max-w-[150px] text-right lg:block">
         AI Consulting &
         <br />
         Strategic Roadmaps
       </p>
+
       <p
-        className="v-label absolute top-[16%] right-6 hidden lg:block"
+        className="v-label absolute top-[16%] right-6 z-10 hidden lg:block"
         style={{ writingMode: "vertical-rl" }}
       >
         System Integration &
@@ -63,6 +73,7 @@ export function Hero() {
 
           <div className="mt-1 flex items-center justify-center lg:justify-between">
             <WorkBtn className="hidden lg:inline-flex" />
+
             <p className="hero-display text-snow">
               TO
               <span className="relative mx-[0.1em] inline-flex h-[0.7em] w-[0.7em] translate-y-[0.06em] items-center justify-center overflow-hidden rounded-[16%] align-middle">
