@@ -45,7 +45,7 @@ export function Pricing() {
         </Reveal>
 
         <div className="grid gap-4 lg:grid-cols-[1fr_1.35fr]">
-          <Reveal delay={0} as="article" className="rounded-none border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#FE7428]/50 hover:shadow-[0_20px_44px_rgba(0,0,0,0.4)] sm:p-6">
+          <Reveal delay={0} as="article" className="rounded-none border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:border-[#FE7428]/50 sm:p-6">
             <h3 className="text-lg font-semibold">AI Strategy & Consulting</h3>
             <p className="mt-1 text-sm text-muted">Boost performance with bespoke AI models</p>
             <ul className="mt-6 space-y-3 text-sm text-muted">
@@ -80,7 +80,7 @@ export function Pricing() {
             </div>
           </Reveal>
 
-          <Reveal delay={120} as="article" className="flex flex-col rounded-none border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#FE7428]/50 hover:shadow-[0_20px_44px_rgba(0,0,0,0.4)] sm:p-6">
+          <Reveal delay={120} as="article" className="flex flex-col rounded-none border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:border-[#FE7428]/50 sm:p-6">
             <p className="flex items-baseline gap-1">
               <span className="text-4xl font-bold">{monthly ? "$2,299" : "$14,900"}</span>
               <span className="text-sm text-muted">{monthly ? "/monthly" : "/project"}</span>

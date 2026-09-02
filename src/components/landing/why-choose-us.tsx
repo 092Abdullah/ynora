@@ -105,7 +105,7 @@ export function WhyChooseUs() {
             </div>
           </Reveal>
 
-          <Reveal delay={200} as="article" className="flex flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.12)] sm:p-5">
+          <Reveal delay={200} as="article" className="flex flex-col rounded-sm bg-snow p-4 shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-shadow duration-300 sm:p-5">
             <h3 className="text-lg font-bold text-ink">Verified Expertise</h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/65">
               We combine deep technical knowledge with creative strategy to deliver AI solutions that
