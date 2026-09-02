@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ArrowSwap } from "./arrow-swap";
+import { Reveal } from "./reveal";
 
 export function Pricing() {
   const [monthly, setMonthly] = useState(true);
@@ -8,7 +10,7 @@ export function Pricing() {
   return (
     <section id="pricing" className="bg-black py-10 text-snow lg:py-14">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
-        <div className="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
+        <Reveal className="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="mb-4 flex items-center gap-2">
               <span className="size-1.5 rounded-full bg-[#FE7428]" />
@@ -40,10 +42,10 @@ export function Pricing() {
               Monthly
             </button>
           </div>
-        </div>
+        </Reveal>
 
         <div className="grid gap-4 lg:grid-cols-[1fr_1.35fr]">
-          <article className="rounded-2xl border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FE7428]/50 sm:p-6">
+          <Reveal delay={0} as="article" className="rounded-none border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#FE7428]/50 hover:shadow-[0_20px_44px_rgba(0,0,0,0.4)] sm:p-6">
             <h3 className="text-lg font-semibold">AI Strategy & Consulting</h3>
             <p className="mt-1 text-sm text-muted">Boost performance with bespoke AI models</p>
             <ul className="mt-6 space-y-3 text-sm text-muted">
@@ -76,9 +78,9 @@ export function Pricing() {
                 />
               </button>
             </div>
-          </article>
+          </Reveal>
 
-          <article className="flex flex-col rounded-2xl border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#FE7428]/50 sm:p-6">
+          <Reveal delay={120} as="article" className="flex flex-col rounded-none border border-white/8 bg-[#141414] p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#FE7428]/50 hover:shadow-[0_20px_44px_rgba(0,0,0,0.4)] sm:p-6">
             <p className="flex items-baseline gap-1">
               <span className="text-4xl font-bold">{monthly ? "$2,299" : "$14,900"}</span>
               <span className="text-sm text-muted">{monthly ? "/monthly" : "/project"}</span>
@@ -90,8 +92,8 @@ export function Pricing() {
                 "Industry-specific insights",
                 "Ongoing advisory support",
               ].map((item) => (
-                <li key={item} className="flex gap-2">
-                  <ArrowUpRight className="mt-0.5 size-4 shrink-0 text-[#FE7428]" />
+                <li key={item} className="group flex gap-2">
+                  <ArrowUpRight className="mt-0.5 size-4 shrink-0 text-[#FE7428] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   {item}
                 </li>
               ))}
@@ -102,13 +104,13 @@ export function Pricing() {
               </p>
               <a
                 href="#contact"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#FE7428] px-5 py-2.5 text-sm font-semibold text-snow transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-hot hover:shadow-[0_10px_24px_rgba(254,116,40,0.4)]"
+                className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#FE7428] px-5 py-2.5 text-sm font-semibold text-snow transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-hot hover:shadow-[0_10px_24px_rgba(254,116,40,0.4)]"
               >
                 Get Started
-                <ArrowUpRight className="size-4" />
+                <ArrowSwap className="size-4" />
               </a>
             </div>
-          </article>
+          </Reveal>
         </div>
       </div>
     </section>

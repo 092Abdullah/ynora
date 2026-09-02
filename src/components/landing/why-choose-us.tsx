@@ -1,5 +1,6 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
+import { ArrowSwap } from "./arrow-swap";
 import { Reveal } from "./reveal";
 
 const QUOTES = [
@@ -13,7 +14,7 @@ const QUOTES = [
     text: "Ynora didn’t just install models — they rebuilt how our team decides. The roadmap paid for itself in a quarter.",
     name: "Amelia Chen",
     role: "Head of Operations",
-    photo: "/images/avatar.webp",
+    photo: "/images/avatars.jpg",
   },
 ];
 
@@ -112,10 +113,10 @@ export function WhyChooseUs() {
             </p>
             <a
               href="#who"
-              className="mt-5 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-snow transition-colors hover:bg-orange"
+              className="group mt-5 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-snow transition-colors hover:bg-orange"
             >
               More about us
-              <ArrowUpRight className="size-3.5" />
+              <ArrowSwap className="size-3.5" />
             </a>
             <div className="mt-5 flex -space-x-3">
               <img
