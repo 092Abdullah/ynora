@@ -3,6 +3,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowSwap } from "./arrow-swap";
 import { Reveal } from "./reveal";
+import { TextSwap } from "./text-swap";
 
 export function Pricing() {
   const [monthly, setMonthly] = useState(true);
