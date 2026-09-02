@@ -9,6 +9,7 @@
  * into the client bundle, and `apply: "serve"` keeps the route out of deployed
  * apps.
  */
+
 export const APP_ENV_ROUTE = "/__app-env";
 
 export function appEnvPlugin() {
