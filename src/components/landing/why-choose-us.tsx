@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 import { ArrowSwap } from "./arrow-swap";
 import { Reveal } from "./reveal";
+import { TextSwap } from "./text-swap";
 
 const QUOTES = [
   {
@@ -115,7 +116,7 @@ export function WhyChooseUs() {
               href="#who"
               className="group mt-5 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-ink px-4 py-2 text-xs font-semibold text-snow transition-colors hover:bg-orange"
             >
-              More about us
+              <TextSwap>More about us</TextSwap>
               <ArrowSwap className="size-3.5" />
             </a>
             <div className="mt-5 flex -space-x-3">

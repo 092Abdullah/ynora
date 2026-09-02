@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ArrowSwap } from "./arrow-swap";
+import { TextSwap } from "./text-swap";
 
 function WorkBtn({ className }: { className?: string }) {
   return (
@@ -11,7 +12,7 @@ function WorkBtn({ className }: { className?: string }) {
         className,
       )}
     >
-      Work with us
+      <TextSwap>Work with us</TextSwap>
       <ArrowSwap className="size-3.5" />
     </a>
   );
