@@ -8,7 +8,7 @@ function WorkBtn({ className }: { className?: string }) {
     <a
       href="#contact"
       className={cn(
-        "group inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-orange px-5 py-2.5 text-[13px] font-semibold text-snow shadow-[0_8px_20px_rgba(255,118,42,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-hot hover:shadow-[0_12px_28px_rgba(255,118,42,0.45)]",
+        "group inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-orange px-5 py-2.5 text-[13px] font-semibold text-snow shadow-[0_8px_20px_rgba(255,118,42,0.35)] transition-colors duration-300 hover:bg-orange-hot",
         className,
       )}
     >

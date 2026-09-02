@@ -3,7 +3,6 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowSwap } from "./arrow-swap";
 import { Reveal } from "./reveal";
-import { TextSwap } from "./text-swap";
 
 export function Pricing() {
   const [monthly, setMonthly] = useState(true);
@@ -105,7 +104,7 @@ export function Pricing() {
               </p>
               <a
                 href="#contact"
-                className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#FE7428] px-5 py-2.5 text-sm font-semibold text-snow transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-hot hover:shadow-[0_10px_24px_rgba(254,116,40,0.4)]"
+                className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#FE7428] px-5 py-2.5 text-sm font-semibold text-snow transition-colors duration-300 hover:bg-orange-hot"
               >
                 <TextSwap>Get Started</TextSwap>
                 <ArrowSwap className="size-4" />
